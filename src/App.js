@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import Navbar from './components/Navbar'
 import Characters from './components/Characters'
 import Pagination from './components/Pagination';
+import Footer from "./components/Footer";
+
 
 function App() {
   const [characters, setcaracteres] = useState([]);
   const [info, setInfo] = useState({});
 
-  const initial_url = 'REACT_APP_initial_url';
+  const initialUrl = "https://rickandmortyapi.com/api/character";
 
   const fetchCharacters = (url) => {
     fetch(url)
@@ -28,7 +30,8 @@ function App() {
   }
 
   useEffect(() => {
-    fetchCharacters(initial_url)
+    fetchCharacters(initialUrl)
+    // eslint-disable-next-line
   }, [])
   
   return (
@@ -46,6 +49,7 @@ function App() {
         <Pagination prev={info.prev} next={info.next} onPrevius={onPrevius} onNext={onNext} />
         
       </div>
+      <Footer brand= 'Redes Sociales'></Footer>
 
     </>
   );

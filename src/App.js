@@ -9,7 +9,7 @@ function App() {
   const [characters, setcaracteres] = useState([]);
   const [info, setInfo] = useState({});
 
-  const initialUrl = "https://rickandmortyapi.com/api/character";
+  const initialUrl = process.env.REACT_APP_URL;
 
   const fetchCharacters = (url) => {
     fetch(url)
@@ -49,7 +49,7 @@ function App() {
         <Pagination prev={info.prev} next={info.next} onPrevius={onPrevius} onNext={onNext} />
         
       </div>
-      <Footer brand= 'Redes Sociales'></Footer>
+      <Footer brand= 'Redes Sociales' className='.text-light'></Footer>
 
     </>
   );

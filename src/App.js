@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from './components/Navbar'
-import Characters from './components/Characters'
+// import Characters from './components/Characters'
+import {Characters} from '../src/components/Characters'
 import Pagination from './components/Pagination';
-import Footer from "./components/Footer";
-
 
 function App() {
   const [characters, setcaracteres] = useState([]);
@@ -49,8 +48,6 @@ function App() {
         <Pagination prev={info.prev} next={info.next} onPrevius={onPrevius} onNext={onNext} />
         
       </div>
-      <Footer brand= 'Redes Sociales' className='.text-light'></Footer>
-
     </>
   );
 }

@@ -24,4 +24,4 @@ const Characters = ({ characters = [] }) => {
   );
 };
 
-export default Characters
+export {Characters}; 
